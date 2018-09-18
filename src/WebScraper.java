@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class WebScraper {
     public static void main(String[] unused) {
         System.out.println(urlToString("https://www.bls.gov/tus/charts/chart9.txt"));
-        System.out.println(counter())
+        System.out.println(counter());
 
     }
 
@@ -27,7 +27,7 @@ public class WebScraper {
         return contents;
     }
     public int counter(final String url) {
-        String text = urlToString("https://www.bls.gov/tus/charts/chart9.txt");
+        String text = urlToString(url);
         int wordCount = 0;
         String word = "sports";
         if (text.contains(word)) {
