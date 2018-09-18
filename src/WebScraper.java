@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class WebScraper {
     public static void main(String[] unused) {
-        System.out.println(urlToString("http://erdani.com/tdpl/hamlet.txt"));
+        System.out.println(urlToString("https://www.bls.gov/tus/charts/chart9.txt"));
+        System.out.println(counter())
 
     }
+
     /**
      * Retrieve contents from a URL and return them as a string.
      *
@@ -24,13 +26,13 @@ public class WebScraper {
         urlScanner.close();
         return contents;
     }
-    public static String counter(final int occurrence) {
-        int wordCount = occurrence;
-        String word = "";
-        for (String line: urlToString()) {
-            if (line.contains(word)) {
-                wordCount++;
-            }
+    public int counter(final String url) {
+        String text = urlToString("https://www.bls.gov/tus/charts/chart9.txt");
+        int wordCount = 0;
+        String word = "sports";
+        if (text.contains(word)) {
+            wordCount++;
         }
-
+        return wordCount;
+    }
 }
